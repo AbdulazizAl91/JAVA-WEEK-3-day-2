@@ -33,7 +33,7 @@ explanation: in the getMessage2 method we have @Qualifier ("3") inside the param
 explanation: in the getMessage2 method we have @Qualifier ("3") inside the parameter,
 	     that mention getMessage3 because getMessage3  is have @Qualifier("3"),
 	     after that we dont know how spring context will read first
-	     and will ignore method MainController() because thier is no @Bean Notations
+	     and will ignore method MainController() because thier is no @Bean annotations
 
 5-
  the output is:
@@ -47,5 +47,5 @@ the output is:hey from message3
 explanation: in the getMessage2 method we have @Qualifier ("3") inside the parameter,
 	     that mention getMessage3 because getMessage3  is have @Qualifier("3"),
 	     after that we dont know how spring context will read first
-	     and will ignore method MainController() because thier is no @Bean Notations
+	     and will ignore method MainController() because thier is no @Bean annotations
 	     		
