@@ -1,0 +1,51 @@
+1-
+the output is: hey from message1
+
+explanation: because we have ounly one method.
+
+2-
+ the output is: hey from message1
+	        hey from message2
+
+explanation: in the getMessage2 method we have @Qualifier("1") inside the parameter,
+	     that mention getMessage1 because getMessage1()  is have @Qualifier ("1").
+
+3-
+ the output is:hey from message3
+		 hey from message2
+		 hey from message1
+                 or
+		 hey from message3
+		 hey from message1
+		 hey from message2
+explanation: in the getMessage2 method we have @Qualifier ("3") inside the parameter,
+	     that mention getMessage3 because getMessage3  is have @Qualifier("3"),
+	     after that we dont know how spring context will read first.
+
+4- 
+  the output is:hey from message3
+		 hey from message2
+		 hey from message1
+                 or
+		 hey from message3
+		 hey from message1
+		 hey from message2
+explanation: in the getMessage2 method we have @Qualifier ("3") inside the parameter,
+	     that mention getMessage3 because getMessage3  is have @Qualifier("3"),
+	     after that we dont know how spring context will read first
+	     and will ignore method MainController() because thier is no @Bean Notations
+
+5-
+ the output is:
+the output is:hey from message3
+		 hey from message2
+		 hey from message1
+                 or
+		 hey from message3
+		 hey from message1
+		 hey from message2
+explanation: in the getMessage2 method we have @Qualifier ("3") inside the parameter,
+	     that mention getMessage3 because getMessage3  is have @Qualifier("3"),
+	     after that we dont know how spring context will read first
+	     and will ignore method MainController() because thier is no @Bean Notations
+	     		
